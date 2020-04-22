@@ -68,7 +68,7 @@ def check(request):
             messages.success(request, '跑步已完成')
             return render(request, 'ham/check.html')
         else:
-            messages.error(request, '该账户IMEI已过期，请更新IMEI')
+            messages.error(request, '该账户IMEI错误或已过期，请更新IMEI')
             request.session['username'] = username
             return redirect(reverse('ham:update'))
     else:
