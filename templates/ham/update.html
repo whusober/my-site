@@ -1,0 +1,22 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    Update IMEI
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+    <br>
+<form method="post" action=" ">
+    <div class="container" style="width: 600px">
+      <label>IMEI</label>
+      <input type="text" class="form-control" name="IMEI" placeholder="Enter your IMEI">
+      <small class="form-text text-muted">We'll never share your IMEI with anyone else.</small>
+       {% csrf_token %}
+      <br>
+      <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </div>
+    </form>
+{% endblock content %}

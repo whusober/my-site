@@ -1,0 +1,37 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    注册——汉姆运动
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+    <br>
+    <h1 align="center">Sign up for Fake Ham</h1>
+    <br>
+    <p align="center">
+    在进行注册之前请确保你已获得你的IMEI。
+    </p>
+    <br>
+    <form method="post" action=" ">
+    <div class="container" style="width: 600px">
+      <label>Userame</label>
+      <input type="text" class="form-control" name="username" placeholder="Enter your username">
+      <label>IMEI</label>
+      <input type="text" class="form-control" name="IMEI" placeholder="Enter your IMEI">
+      <small class="form-text text-muted">We'll never share your IMEI with anyone else.</small>
+{#       {% csrf_token %}#}
+      <label>Gender</label>
+    <select class="custom-select" name="sex" placeholder="???">
+{#      <option selected="">Choose your gender</option>#}
+      <option value="1">Boy</option>
+      <option value="0">Girl</option>
+    </select>
+      <br>
+      {% csrf_token %}
+      <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </div>
+    </form>
+{% endblock content %}

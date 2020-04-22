@@ -1,0 +1,26 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    汉姆运动
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+    <br>
+    <h1 align="center">Fake Ham</h1>
+    <h5 align="center"><small class="text-muted">For development use only.</small></h5>
+    <br>
+    <p align="center">
+    欢迎使用汉姆运动, 首次使用请注册。
+    </p>
+    <br>
+    <div align="center">
+    <a class="btn btn-outline-primary" href="../sign_up">注册</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-outline-primary" href="../sign_in">登录</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-outline-primary" href="../check">状态查询</a>
+    </div>
+{% endblock content %}

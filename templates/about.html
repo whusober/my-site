@@ -1,0 +1,53 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    ABOUT——S的小站
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+    <br>
+    <br>
+    <div class="row" align="middle">
+    <div class="col-lg-6">
+    <div class="card border-dark mb-5" style="max-width: 20rem;height: 200px">
+  <div class="card-header">About This Site</div>
+  <div class="card-body">
+    <p class="card-text" align="left">
+        后端框架: Django<br>
+        前端实现: Bootstrap<br>
+        代码开源: <a href="https://github.com/whusober/Mysite">GitHub</a><small class="form-text text-muted">开源代码已抹去隐私信息</small>
+    </p>
+  </div>
+</div>
+<div class="card border-dark mb-5" style="max-width: 20rem;height: 500px">
+  <div class="card-header">Roast</div>
+  <div class="card-body">
+    <p class="card-text" align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp;写这个网站的目的是想尝试一下全栈开发，结果发现没有Web相关知识的铺垫蛮干真的是太难了，只建立网站的雏形就花了将近一周的时间。<br><br>&nbsp;&nbsp;&nbsp;&nbsp;即便到现在依然对前端方面的知识知之甚少，都是按照网上的方法比葫芦画瓢写出来的，如果你仔细观察网站的html源码的话你就会发现其中存在着大量的语句冗余。
+    </p>
+  </div>
+</div>
+</div>
+    <div class="col-lg-6">
+<div class="card border-dark mb-5" style="max-width: 20rem;height: 200px">
+  <div class="card-header">Contact Me</div>
+  <div class="card-body">
+    <p class="card-text" align="left">
+        GitHub: <a href="https://github.com/whusober">@whusober</a><br>
+        <br>
+        Email: whusober@gmail.com<br>
+    </p>
+  </div>
+</div>
+<div class="card border-dark mb-5" style="max-width: 20rem;height: 500px">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <p class="card-text" align="left">还没想好写什么</p>
+  </div>
+</div>
+</div>
+</div>
+{% endblock content %}

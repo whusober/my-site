@@ -1,0 +1,27 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    状态查询——汉姆运动
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+    <br>
+    <h1 align="center">Check Statu</h1>
+    <br>
+    <p align="center">
+    输入username以获得目前状态
+    </p>
+    <br>
+    <form method="post" action=" ">
+    <div class="container" style="width: 600px">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" placeholder="Enter your username">
+      {% csrf_token %}
+      <br>
+      <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </div>
+    </form>
+{% endblock content %}
